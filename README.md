@@ -21,7 +21,6 @@ This project re-engineers the legacy Java Swing POS (flat-file storage) into a M
   - Mongoose models for employees, items, customers, rentals, sales, returns, session logs, temp transactions.
   - Services for auth (bcrypt hashing + token), employees, items, customers, rentals (late-fee logic), transactions (sale/rental/return), session logs, sales listing.
   - Controllers and routes under `/api`: auth, employees, items, customers, transactions (sale/rental/return), logs (sessions, sales). Health checks at `/health` and `/api/health`.
-  - Seed scripts: `npm run seed:test-users` (admin_test / cashier_test) and `npm run seed:sample` (adds users, sample sale/rental items, customers).
 - Frontend
   - API client with dev default `http://localhost:5000/api` (override via `REACT_APP_API_URL`).
   - React screens: LoginPage, AdminDashboard (employee CRUD, session logs, sales list), CashierDashboard, TransactionPage (sale/rental/return cart), PaymentPage (finalize via APIs).
@@ -35,7 +34,6 @@ This project re-engineers the legacy Java Swing POS (flat-file storage) into a M
 1) Backend
    - Set `mern-pos/backend/.env`: `MONGO_URI=mongodb://127.0.0.1:27017/mern-pos` and optional `PORT`.
    - Install deps: `npm install`
-   - Seed sample data (optional): `npm run seed:sample`
    - Run: `npm run dev` (health: `http://localhost:5000/health`)
 2) Frontend
    - Set `REACT_APP_API_URL` if backend not on default.
