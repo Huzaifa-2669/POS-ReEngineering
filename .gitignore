@@ -6,3 +6,9 @@
 
 # Logs
 **/*.log
+
+/docs/diagrams/*.png
+
+INSTRUCTIONS.md
+
+legacy_readme.md
